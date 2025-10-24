@@ -1,35 +1,83 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wail - موقع شخصي</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wail — موقع شخصي</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
+  <div id="bg-wrap">
+    <canvas id="particles"></canvas>
+    <canvas id="flagOverlay"></canvas>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
         <h1>Wail</h1>
-        <a href="https://www.instagram.com/wa_il__777/" target="_blank">@wa_il__777</a>
-    </header>
+        <p class="tag">@wa_il__777</p>
+      </div>
+      <nav class="socials">
+        <!-- Instagram -->
+        <a class="icon" href="https://www.instagram.com/wa_il__777/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zM18.6 6.3a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z" /></svg>
+        </a>
+        <!-- Facebook: search link to your account name WA EL -->
+        <a class="icon" href="https://www.facebook.com/search/top?q=WA%20EL" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8.5v-2.9h2V9.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.6h2.3l-.4 2.9h-1.9V22A10 10 0 0 0 22 12z" /></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="flag-section">
-        <canvas id="algeriaFlag"></canvas>
+  <main class="container">
+    <section class="intro card">
+      <h2>مرحبا — أنا Wail</h2>
+      <p>موقع شخصي يعرض ثقافة وجمال الجزائر، مع إمكانية البيع مستقبلاً وإضافة متجر.</p>
+      <div class="cta-row">
+        <a class="btn" href="#gallery">مشاهدة الصور</a>
+        <a class="btn hollow" href="#contact">اتصل بي</a>
+      </div>
     </section>
 
-    <section class="about">
-        <h2>عن الجزائر</h2>
-        <p>الجزائر دولة شمال إفريقيا، معروفة بتاريخها العريق، طبيعتها الجميلة وثقافتها الغنية.</p>
-        <ul>
-            <li>العاصمة: الجزائر</li>
-            <li>السكان: حوالي 45 مليون</li>
-            <li>اللغة الرسمية: العربية والأمازيغية</li>
-        </ul>
+    <section id="about" class="card reveal">
+      <h3>عن الجزائر</h3>
+      <p>الجزائر دولة شمال إفريقيا، معروفة بتاريخها العريق وطبيعتها المتنوعة من السواحل إلى الصحراء.</p>
+      <ul class="facts">
+        <li><strong>العاصمة:</strong> الجزائر</li>
+        <li><strong>اللغات:</strong> العربية، الأمازيغية</li>
+        <li><strong>السكان (تقريبًا):</strong> ~45 مليون</li>
+      </ul>
     </section>
 
-    <footer>
-        <p>© 2025 Wail. جميع الحقوق محفوظة.</p>
-    </footer>
+    <section id="gallery" class="card gallery reveal">
+      <h3>صور الجزائر</h3>
+      <div class="gallery-track" id="galleryTrack" tabindex="0">
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Algiers_Casbah_3.jpg/640px-Algiers_Casbah_3.jpg" alt="القصبة"><figcaption>القصبة — الجزائر</figcaption></figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Sahara_Dunes_in_Algeria.jpg/640px-Sahara_Dunes_in_Algeria.jpg" alt="الصحراء"><figcaption>الصحراء الكبرى</figcaption></figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Djemaa_el_Fna_Algeria.jpg/640px-Djemaa_el_Fna_Algeria.jpg" alt="منظر طبيعي"><figcaption>طبيعة ساحرة</figcaption></figure>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="contact" class="card contact reveal">
+      <h3>تواصل معي</h3>
+      <p>للاستفسار أو لشراء منتجات تواصل معي مباشرة:</p>
+      <ul class="contact-list">
+        <li>الهاتف: <a href="tel:0775865465">0775865465</a></li>
+        <li>إنستغرام: <a href="https://www.instagram.com/wa_il__777/" target="_blank" rel="noopener">@wa_il__777</a></li>
+        <li>فيسبوك: <a href="https://www.facebook.com/search/top?q=WA%20EL" target="_blank" rel="noopener">WA EL (search)</a></li>
+      </ul>
+      <p class="small">ملاحظة: الرقم يظهر كزر اتصال مباشر على الموبايل.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Wail. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
